@@ -1,0 +1,207 @@
+{
+  "common": {
+    "appName": "EduConnect Angola",
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "search": "Pesquisar",
+    "back": "Voltar",
+    "next": "Próximo",
+    "submit": "Enviar",
+    "close": "Fechar",
+    "yes": "Sim",
+    "no": "Não",
+    "offline": "Você está offline",
+    "tryAgain": "Tentar novamente",
+    "seeMore": "Ver mais",
+    "seeLess": "Ver menos",
+    "menu": "Menu",
+    "home": "Início",
+    "profile": "Perfil",
+    "settings": "Configurações",
+    "logout": "Sair",
+    "login": "Entrar",
+    "register": "Cadastrar",
+    "welcome": "Bem-vindo(a)",
+    "notFound": "Página não encontrada",
+    "goToHome": "Ir para a página inicial"
+  },
+  "auth": {
+    "email": "E-mail",
+    "password": "Senha",
+    "confirmPassword": "Confirmar senha",
+    "forgotPassword": "Esqueceu a senha?",
+    "resetPassword": "Redefinir senha",
+    "createAccount": "Criar conta",
+    "alreadyHaveAccount": "Já tem uma conta?",
+    "dontHaveAccount": "Não tem uma conta?",
+    "loginWith": "Entrar com {{provider}}",
+    "registerWith": "Cadastrar com {{provider}}",
+    "rememberMe": "Lembrar-me",
+    "loginSuccess": "Login realizado com sucesso",
+    "registerSuccess": "Cadastro realizado com sucesso",
+    "logoutSuccess": "Logout realizado com sucesso",
+    "passwordResetSuccess": "Redefinição de senha solicitada com sucesso",
+    "passwordResetError": "Erro ao solicitar redefinição de senha",
+    "invalidCredentials": "Credenciais inválidas",
+    "accountCreated": "Conta criada com sucesso"
+  },
+  "home": {
+    "hero": {
+      "title": "Conectando a Educação Digital em Angola",
+      "subtitle": "Plataforma educacional para escolas, professores e alunos",
+      "cta": "Começar Agora",
+      "learnMore": "Saiba Mais"
+    },
+    "forWho": {
+      "title": "Para quem é a plataforma?",
+      "schools": {
+        "title": "Para Escolas",
+        "description": "Ofereça uma presença online para sua instituição, gerencie professores, alunos e turmas com ferramentas completas."
+      },
+      "teachers": {
+        "title": "Para Professores",
+        "description": "Crie aulas ao vivo ou gravadas, publique artigos educativos e gerencie o desempenho dos seus alunos."
+      },
+      "students": {
+        "title": "Para Alunos",
+        "description": "Acesse conteúdos educacionais de qualidade, participe de aulas ao vivo e acompanhe seu progresso acadêmico."
+      }
+    },
+    "howItWorks": {
+      "title": "Como Funciona",
+      "liveClasses": {
+        "title": "Aulas ao Vivo e Gravadas",
+        "description": "Transmita aulas ao vivo com interação em tempo real ou disponibilize conteúdo gravado para acesso a qualquer momento."
+      },
+      "management": {
+        "title": "Gestão Completa",
+        "description": "Ferramentas avançadas para gestão de alunos, professores, turmas e conteúdos educacionais."
+      },
+      "accessibility": {
+        "title": "Acessível em Qualquer Dispositivo",
+        "description": "Acesse a plataforma de qualquer lugar, em computadores, tablets ou smartphones."
+      }
+    },
+    "cta": {
+      "title": "Pronto para transformar a educação?",
+      "description": "Junte-se a milhares de escolas, professores e alunos na plataforma educacional mais completa de Angola.",
+      "button": "Começar Gratuitamente"
+    }
+  },
+  "dashboard": {
+    "welcome": "Bem-vindo(a) ao seu Dashboard",
+    "overview": "Visão Geral",
+    "statistics": "Estatísticas",
+    "recentActivity": "Atividade Recente",
+    "upcomingClasses": "Próximas Aulas",
+    "pendingTasks": "Tarefas Pendentes",
+    "announcements": "Anúncios",
+    "quickAccess": "Acesso Rápido",
+    "createClass": "Criar Aula",
+    "createAssignment": "Criar Tarefa",
+    "viewSchedule": "Ver Agenda",
+    "viewGrades": "Ver Notas"
+  },
+  "classroom": {
+    "liveClass": "Aula ao Vivo",
+    "recordedClass": "Aula Gravada",
+    "materials": "Materiais",
+    "assignments": "Tarefas",
+    "discussions": "Discussões",
+    "participants": "Participantes",
+    "startClass": "Iniciar Aula",
+    "endClass": "Encerrar Aula",
+    "joinClass": "Entrar na Aula",
+    "leaveClass": "Sair da Aula",
+    "raiseHand": "Levantar a Mão",
+    "askQuestion": "Fazer Pergunta",
+    "shareScreen": "Compartilhar Tela",
+    "turnOnCamera": "Ligar Câmera",
+    "turnOffCamera": "Desligar Câmera",
+    "turnOnMic": "Ligar Microfone",
+    "turnOffMic": "Desligar Microfone",
+    "chat": "Chat",
+    "sendMessage": "Enviar Mensagem",
+    "downloadMaterial": "Baixar Material",
+    "submitAssignment": "Enviar Tarefa",
+    "gradeAssignment": "Avaliar Tarefa"
+  },
+  "profile": {
+    "personalInfo": "Informações Pessoais",
+    "name": "Nome",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "address": "Endereço",
+    "bio": "Biografia",
+    "role": "Função",
+    "institution": "Instituição",
+    "changePassword": "Alterar Senha",
+    "currentPassword": "Senha Atual",
+    "newPassword": "Nova Senha",
+    "confirmNewPassword": "Confirmar Nova Senha",
+    "updateProfile": "Atualizar Perfil",
+    "profileUpdated": "Perfil atualizado com sucesso",
+    "passwordChanged": "Senha alterada com sucesso"
+  },
+  "school": {
+    "info": "Informações da Escola",
+    "name": "Nome da Escola",
+    "type": "Tipo de Instituição",
+    "address": "Endereço",
+    "phone": "Telefone",
+    "email": "E-mail",
+    "website": "Website",
+    "description": "Descrição",
+    "courses": "Cursos",
+    "teachers": "Professores",
+    "students": "Alunos",
+    "classes": "Turmas",
+    "events": "Eventos",
+    "announcements": "Anúncios",
+    "gallery": "Galeria",
+    "contactUs": "Fale Conosco"
+  },
+  "seo": {
+    "title": "Título",
+    "description": "Descrição",
+    "keywords": "Palavras-chave",
+    "generateKeywords": "Gerar Palavras-chave",
+    "socialImage": "Imagem para Redes Sociais",
+    "pageType": "Tipo de Página",
+    "allowIndexing": "Permitir Indexação",
+    "includeSitemap": "Incluir no Sitemap",
+    "applySEO": "Aplicar Configurações de SEO",
+    "seoApplied": "Configurações de SEO aplicadas com sucesso",
+    "titleTooShort": "Título muito curto. Recomendamos pelo menos 30 caracteres",
+    "titleTooLong": "Título muito longo. Recomendamos no máximo 60 caracteres",
+    "titleIdeal": "Título com tamanho ideal!",
+    "descriptionTooShort": "Descrição muito curta. Recomendamos pelo menos 70 caracteres",
+    "descriptionTooLong": "Descrição muito longa. Recomendamos no máximo 160 caracteres",
+    "descriptionIdeal": "Descrição com tamanho ideal!"
+  },
+  "errors": {
+    "pageNotFound": "Página não encontrada",
+    "pageNotFoundDescription": "A página que você está procurando não existe ou foi movida.",
+    "serverError": "Erro no servidor",
+    "serverErrorDescription": "Ocorreu um erro no servidor. Por favor, tente novamente mais tarde.",
+    "networkError": "Erro de conexão",
+    "networkErrorDescription": "Não foi possível conectar ao servidor. Verifique sua conexão com a internet.",
+    "accessDenied": "Acesso negado",
+    "accessDeniedDescription": "Você não tem permissão para acessar esta página.",
+    "sessionExpired": "Sessão expirada",
+    "sessionExpiredDescription": "Sua sessão expirou. Por favor, faça login novamente."
+  },
+  "accessibility": {
+    "skipToContent": "Pular para o conteúdo",
+    "highContrast": "Alto Contraste",
+    "largeText": "Texto Grande",
+    "screenReader": "Leitor de Tela",
+    "accessibilitySettings": "Configurações de Acessibilidade",
+    "accessibilityStatement": "Declaração de Acessibilidade"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "common": {
+    "appName": "EduConnect Angola",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "offline": "You are offline",
+    "tryAgain": "Try again",
+    "seeMore": "See more",
+    "seeLess": "See less",
+    "menu": "Menu",
+    "home": "Home",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register",
+    "welcome": "Welcome",
+    "notFound": "Page not found",
+    "goToHome": "Go to home page"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "forgotPassword": "Forgot password?",
+    "resetPassword": "Reset password",
+    "createAccount": "Create account",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "loginWith": "Login with {{provider}}",
+    "registerWith": "Register with {{provider}}",
+    "rememberMe": "Remember me",
+    "loginSuccess": "Login successful",
+    "registerSuccess": "Registration successful",
+    "logoutSuccess": "Logout successful",
+    "passwordResetSuccess": "Password reset request successful",
+    "passwordResetError": "Error requesting password reset",
+    "invalidCredentials": "Invalid credentials",
+    "accountCreated": "Account created successfully"
+  },
+  "home": {
+    "hero": {
+      "title": "Connecting Digital Education in Angola",
+      "subtitle": "Educational platform for schools, teachers and students",
+      "cta": "Get Started",
+      "learnMore": "Learn More"
+    },
+    "forWho": {
+      "title": "Who is the platform for?",
+      "schools": {
+        "title": "For Schools",
+        "description": "Provide an online presence for your institution, manage teachers, students and classes with comprehensive tools."
+      },
+      "teachers": {
+        "title": "For Teachers",
+        "description": "Create live or recorded classes, publish educational articles and manage your students' performance."
+      },
+      "students": {
+        "title": "For Students",
+        "description": "Access quality educational content, participate in live classes and track your academic progress."
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "liveClasses": {
+        "title": "Live and Recorded Classes",
+        "description": "Stream live classes with real-time interaction or make recorded content available for access at any time."
+      },
+      "management": {
+        "title": "Complete Management",
+        "description": "Advanced tools for managing students, teachers, classes and educational content."
+      },
+      "accessibility": {
+        "title": "Accessible on Any Device",
+        "description": "Access the platform from anywhere, on computers, tablets or smartphones."
+      }
+    },
+    "cta": {
+      "title": "Ready to transform education?",
+      "description": "Join thousands of schools, teachers and students on Angola's most comprehensive educational platform.",
+      "button": "Start for Free"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome to your Dashboard",
+    "overview": "Overview",
+    "statistics": "Statistics",
+    "recentActivity": "Recent Activity",
+    "upcomingClasses": "Upcoming Classes",
+    "pendingTasks": "Pending Tasks",
+    "announcements": "Announcements",
+    "quickAccess": "Quick Access",
+    "createClass": "Create Class",
+    "createAssignment": "Create Assignment",
+    "viewSchedule": "View Schedule",
+    "viewGrades": "View Grades"
+  },
+  "classroom": {
+    "liveClass": "Live Class",
+    "recordedClass": "Recorded Class",
+    "materials": "Materials",
+    "assignments": "Assignments",
+    "discussions": "Discussions",
+    "participants": "Participants",
+    "startClass": "Start Class",
+    "endClass": "End Class",
+    "joinClass": "Join Class",
+    "leaveClass": "Leave Class",
+    "raiseHand": "Raise Hand",
+    "askQuestion": "Ask Question",
+    "shareScreen": "Share Screen",
+    "turnOnCamera": "Turn On Camera",
+    "turnOffCamera": "Turn Off Camera",
+    "turnOnMic": "Turn On Microphone",
+    "turnOffMic": "Turn Off Microphone",
+    "chat": "Chat",
+    "sendMessage": "Send Message",
+    "downloadMaterial": "Download Material",
+    "submitAssignment": "Submit Assignment",
+    "gradeAssignment": "Grade Assignment"
+  },
+  "profile": {
+    "personalInfo": "Personal Information",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "bio": "Biography",
+    "role": "Role",
+    "institution": "Institution",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "updateProfile": "Update Profile",
+    "profileUpdated": "Profile updated successfully",
+    "passwordChanged": "Password changed successfully"
+  },
+  "school": {
+    "info": "School Information",
+    "name": "School Name",
+    "type": "Institution Type",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "website": "Website",
+    "description": "Description",
+    "courses": "Courses",
+    "teachers": "Teachers",
+    "students": "Students",
+    "classes": "Classes",
+    "events": "Events",
+    "announcements": "Announcements",
+    "gallery": "Gallery",
+    "contactUs": "Contact Us"
+  },
+  "seo": {
+    "title": "Title",
+    "description": "Description",
+    "keywords": "Keywords",
+    "generateKeywords": "Generate Keywords",
+    "socialImage": "Social Image",
+    "pageType": "Page Type",
+    "allowIndexing": "Allow Indexing",
+    "includeSitemap": "Include in Sitemap",
+    "applySEO": "Apply SEO Settings",
+    "seoApplied": "SEO settings applied successfully",
+    "titleTooShort": "Title too short. We recommend at least 30 characters",
+    "titleTooLong": "Title too long. We recommend a maximum of 60 characters",
+    "titleIdeal": "Title with ideal length!",
+    "descriptionTooShort": "Description too short. We recommend at least 70 characters",
+    "descriptionTooLong": "Description too long. We recommend a maximum of 160 characters",
+    "descriptionIdeal": "Description with ideal length!"
+  },
+  "errors": {
+    "pageNotFound": "Page not found",
+    "pageNotFoundDescription": "The page you are looking for does not exist or has been moved.",
+    "serverError": "Server error",
+    "serverErrorDescription": "An error occurred on the server. Please try again later.",
+    "networkError": "Connection error",
+    "networkErrorDescription": "Could not connect to the server. Check your internet connection.",
+    "accessDenied": "Access denied",
+    "accessDeniedDescription": "You do not have permission to access this page.",
+    "sessionExpired": "Session expired",
+    "sessionExpiredDescription": "Your session has expired. Please log in again."
+  },
+  "accessibility": {
+    "skipToContent": "Skip to content",
+    "highContrast": "High Contrast",
+    "largeText": "Large Text",
+    "screenReader": "Screen Reader",
+    "accessibilitySettings": "Accessibility Settings",
+    "accessibilityStatement": "Accessibility Statement"
+  }
+}
