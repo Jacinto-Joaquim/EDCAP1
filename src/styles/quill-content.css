@@ -1,0 +1,208 @@
+
+    /* Styles for rendering Quill content on public pages */
+    .ql-editor-content {
+        font-family: 'Lato', sans-serif;
+        font-size: 1rem; /* or 16px */
+        line-height: 1.7;
+        color: hsl(var(--foreground)); /* Use your theme's text color */
+    }
+
+    .ql-editor-content h1 {
+        font-size: 2.25em; /* ~36px */
+        margin-bottom: 0.5em;
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif; /* Or your heading font */
+        color: hsl(var(--primary));
+    }
+
+    .ql-editor-content h2 {
+        font-size: 1.875em; /* ~30px */
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif;
+        color: hsl(var(--primary));
+    }
+
+    .ql-editor-content h3 {
+        font-size: 1.5em; /* ~24px */
+        margin-top: 1.25em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        color: hsl(var(--primary));
+    }
+    .ql-editor-content h4 {
+        font-size: 1.25em; /* ~20px */
+        margin-top: 1em;
+        margin-bottom: 0.4em;
+        font-weight: 600;
+         font-family: 'Roboto', sans-serif;
+        color: hsl(var(--primary));
+    }
+    .ql-editor-content h5 {
+        font-size: 1.125em; /* ~18px */
+        margin-top: 1em;
+        margin-bottom: 0.4em;
+        font-weight: 600;
+         font-family: 'Roboto', sans-serif;
+        color: hsl(var(--primary));
+    }
+    .ql-editor-content h6 {
+        font-size: 1em; /* ~16px */
+        margin-top: 1em;
+        margin-bottom: 0.4em;
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        color: hsl(var(--primary));
+    }
+
+
+    .ql-editor-content p,
+    .ql-editor-content li {
+        margin-bottom: 1em;
+    }
+
+    .ql-editor-content ul,
+    .ql-editor-content ol {
+        margin-left: 1.5em;
+        padding-left: 1em;
+        margin-bottom: 1em;
+    }
+    .ql-editor-content ul li { list-style-type: disc; }
+    .ql-editor-content ol li { list-style-type: decimal; }
+
+    .ql-editor-content strong { font-weight: bold; }
+    .ql-editor-content em { font-style: italic; }
+    .ql-editor-content u { text-decoration: underline; }
+    .ql-editor-content s { text-decoration: line-through; }
+
+    .ql-editor-content a {
+        color: hsl(var(--edcap-orange)); /* Use your theme's link color */
+        text-decoration: underline;
+        font-weight: 500;
+    }
+    .ql-editor-content a:hover {
+        color: hsl(var(--edcap-green)); /* Link hover color */
+    }
+
+    .ql-editor-content blockquote {
+        border-left: 4px solid hsl(var(--accent)); /* Accent color for quote */
+        margin: 1.5em 0;
+        padding: 0.5em 1.5em;
+        color: hsl(var(--muted-foreground)); /* Muted text color */
+        font-style: italic;
+    }
+    .ql-editor-content blockquote p {
+        margin-bottom: 0;
+    }
+
+
+    .ql-editor-content pre.ql-syntax {
+        background-color: hsl(var(--secondary)); /* Darker background for code */
+        color: hsl(var(--secondary-foreground)); /* Light text for code */
+        padding: 1em;
+        border-radius: 0.375rem; /* Tailwind's rounded-md */
+        overflow-x: auto;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.9em;
+        margin: 1.5em 0;
+    }
+
+    .ql-editor-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.375rem; /* Tailwind's rounded-md */
+        margin: 1em 0;
+        display: block; /* To allow margin auto for centering if needed */
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* Tailwind's shadow-md */
+    }
+    
+    .ql-editor-content .ql-video {
+        display: block;
+        max-width: 100%;
+        margin: 1em auto; /* Center video */
+    }
+    .ql-editor-content iframe {
+        width: 100%;
+        min-height: 315px; /* Standard 16:9 aspect ratio for 560px width */
+        aspect-ratio: 16 / 9;
+        border-radius: 0.375rem;
+    }
+
+
+    .ql-editor-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5em 0;
+        font-size: 0.95em;
+    }
+
+    .ql-editor-content th,
+    .ql-editor-content td {
+        border: 1px solid hsl(var(--border)); /* Border color */
+        padding: 0.75em;
+        text-align: left;
+    }
+
+    .ql-editor-content th {
+        background-color: hsl(var(--muted)/0.5); /* Light background for headers */
+        font-weight: 600;
+        color: hsl(var(--primary));
+    }
+
+    .ql-editor-content .ql-align-center { text-align: center; }
+    .ql-editor-content .ql-align-right { text-align: right; }
+    .ql-editor-content .ql-align-justify { text-align: justify; }
+
+    .ql-editor-content .ql-indent-1 { padding-left: 3em; }
+    .ql-editor-content .ql-indent-2 { padding-left: 6em; }
+    /* Add more indent levels as needed */
+
+    /* Font styles based on Quill classes */
+    .ql-editor-content .ql-font-serif { font-family: Georgia, 'Times New Roman', serif; }
+    .ql-editor-content .ql-font-monospace { font-family: 'Courier New', Courier, monospace; }
+    .ql-editor-content .ql-font-arial { font-family: Arial, sans-serif; }
+    .ql-editor-content .ql-font-comic-sans { font-family: 'Comic Sans MS', cursive, sans-serif; }
+    .ql-editor-content .ql-font-courier-new { font-family: 'Courier New', Courier, monospace; }
+    .ql-editor-content .ql-font-georgia { font-family: Georgia, serif; }
+    .ql-editor-content .ql-font-helvetica { font-family: Helvetica, Arial, sans-serif; }
+    .ql-editor-content .ql-font-lucida-sans { font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
+    .ql-editor-content .ql-font-roboto { font-family: 'Roboto', sans-serif; }
+    .ql-editor-content .ql-font-lato { font-family: 'Lato', sans-serif; }
+    .ql-editor-content .ql-font-montserrat { font-family: 'Montserrat', sans-serif; }
+    .ql-editor-content .ql-font-oswald { font-family: 'Oswald', sans-serif; }
+    .ql-editor-content .ql-font-raleway { font-family: 'Raleway', sans-serif; }
+    .ql-editor-content .ql-font-source-sans-pro { font-family: 'Source Sans Pro', sans-serif; }
+    .ql-editor-content .ql-font-open-sans { font-family: 'Open Sans', sans-serif; }
+    .ql-editor-content .ql-font-noto-sans { font-family: 'Noto Sans', sans-serif; }
+    .ql-editor-content .ql-font-pt-serif { font-family: 'PT Serif', serif; }
+    .ql-editor-content .ql-font-ubuntu { font-family: 'Ubuntu', sans-serif; }
+    .ql-editor-content .ql-font-playfair-display { font-family: 'Playfair Display', serif; }
+    .ql-editor-content .ql-font-merriweather { font-family: 'Merriweather', serif; }
+    .ql-editor-content .ql-font-bitter { font-family: 'Bitter', serif; }
+    .ql-editor-content .ql-font-poppins { font-family: 'Poppins', sans-serif; }
+    
+    /* Size styles */
+    .ql-editor-content .ql-size-small { font-size: 0.75em; }
+    .ql-editor-content .ql-size-large { font-size: 1.5em; }
+    .ql-editor-content .ql-size-huge { font-size: 2.5em; }
+
+    /* Custom sizes from whitelist */
+    .ql-editor-content .ql-size-8px { font-size: 8px; }
+    .ql-editor-content .ql-size-9px { font-size: 9px; }
+    .ql-editor-content .ql-size-10px { font-size: 10px; }
+    .ql-editor-content .ql-size-11px { font-size: 11px; }
+    .ql-editor-content .ql-size-12px { font-size: 12px; }
+    .ql-editor-content .ql-size-14px { font-size: 14px; }
+    /* Default is 16px so no class needed if that's the base for .ql-editor */
+    .ql-editor-content .ql-size-18px { font-size: 18px; }
+    .ql-editor-content .ql-size-20px { font-size: 20px; }
+    .ql-editor-content .ql-size-24px { font-size: 24px; }
+    .ql-editor-content .ql-size-30px { font-size: 30px; }
+    .ql-editor-content .ql-size-36px { font-size: 36px; }
+    .ql-editor-content .ql-size-48px { font-size: 48px; }
+    .ql-editor-content .ql-size-60px { font-size: 60px; }
+    .ql-editor-content .ql-size-72px { font-size: 72px; }
+    .ql-editor-content .ql-size-96px { font-size: 96px; }
+  

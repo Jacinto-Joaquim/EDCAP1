@@ -1,0 +1,99 @@
+
+    .ql-editor {
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: hsl(var(--foreground));
+        padding: 1rem; /* Add some padding inside the editor */
+    }
+
+    .ql-container.ql-snow {
+        border: 1px solid hsl(var(--border));
+        border-radius: var(--radius);
+    }
+    .ql-toolbar.ql-snow {
+        border: 1px solid hsl(var(--border));
+        border-bottom: 0;
+        border-top-left-radius: var(--radius);
+        border-top-right-radius: var(--radius);
+        background-color: hsl(var(--muted)/0.5);
+        padding: 12px 8px;
+    }
+
+    .ql-toolbar.ql-snow .ql-picker-label {
+        color: hsl(var(--foreground));
+    }
+    .ql-toolbar.ql-snow .ql-picker-options {
+        background-color: hsl(var(--background));
+        border: 1px solid hsl(var(--border));
+        box-shadow: var(--shadow-md);
+    }
+    .ql-toolbar.ql-snow .ql-picker-item:hover {
+        background-color: hsl(var(--accent));
+        color: hsl(var(--accent-foreground));
+    }
+     .ql-toolbar.ql-snow .ql-active .ql-picker-label,
+     .ql-toolbar.ql-snow .ql-active .ql-picker-item {
+        color: hsl(var(--accent-foreground));
+     }
+     .ql-toolbar.ql-snow .ql-active .ql-picker-label {
+        font-weight: 600;
+     }
+
+
+    .ql-snow .ql-stroke {
+        stroke: hsl(var(--foreground));
+    }
+    .ql-snow .ql-fill {
+        fill: hsl(var(--foreground));
+    }
+    .ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+        stroke: hsl(var(--foreground));
+    }
+
+    /* Table styling */
+    .ql-snow .ql-editor table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .ql-snow .ql-editor th, 
+    .ql-snow .ql-editor td {
+      border: 1px solid hsl(var(--border));
+      padding: 0.5rem;
+      text-align: left;
+    }
+    .ql-snow .ql-editor th {
+      background-color: hsl(var(--muted)/0.5);
+      font-weight: bold;
+    }
+
+    /* Code block styling */
+    .ql-snow .ql-editor pre.ql-syntax {
+      background-color: hsl(var(--secondary));
+      color: hsl(var(--secondary-foreground));
+      padding: 1rem;
+      border-radius: var(--radius);
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Blockquote styling */
+    .ql-snow .ql-editor blockquote {
+      border-left: 4px solid hsl(var(--accent));
+      margin: 1rem 0;
+      padding-left: 1rem;
+      color: hsl(var(--muted-foreground));
+      font-style: italic;
+    }
+
+    /* Links */
+    .ql-snow .ql-editor a {
+        color: hsl(var(--edcap-orange));
+        text-decoration: underline;
+    }
+    .ql-snow .ql-editor a:hover {
+        color: hsl(var(--edcap-green));
+    }
+  
