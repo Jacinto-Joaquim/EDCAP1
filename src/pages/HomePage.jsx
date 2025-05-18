@@ -5,6 +5,7 @@
     import AboutEdcapSection from '@/components/home/AboutEdcapSection.jsx';
     import ServicesOverviewSection from '@/components/home/ServicesOverviewSection.jsx';
     import TestimonialsSection from '@/components/home/TestimonialsSection.jsx';
+    import VideoTestimonialsSection from '@/components/home/VideoTestimonialsSection.jsx';
     import RecentBlogPostsSection from '@/components/home/RecentBlogPostsSection.jsx';
     import CallToActionSection from '@/components/home/CallToActionSection.jsx';
     import ContactFormSection from '@/components/home/ContactFormSection.jsx';
@@ -54,6 +55,7 @@
           <AboutEdcapSection />
           <ServicesOverviewSection />
           <TestimonialsSection />
+          <VideoTestimonialsSection />
           <RecentBlogPostsSection />
           <CallToActionSection />
           <ContactFormSection />
