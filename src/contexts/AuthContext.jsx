@@ -77,7 +77,7 @@
           if (data.user) {
             toast({ title: "Login Bem-sucedido!", description: "Bem-vindo de volta!" });
             // Remover a navegação daqui, deixando apenas na página de login
-            // navigate('/painel/dashboard');
+            navigate('/painel/dashboard');
             return true;
           }
           
@@ -144,7 +144,7 @@
       
       const fetchUsers = async () => {
         if (!supabase || userRoleState !== 'manager') {
-            // toast({ title: "Acesso Negado", description: "Apenas gerentes podem buscar usuários.", variant: "destructive" });
+            toast({ title: "Acesso Negado", description: "Apenas gerentes podem buscar usuários.", variant: "destructive" });
             return [];
         }
         setLoadingAuthState(true);
