@@ -12,8 +12,7 @@
     const AdminLoginPage = () => {
       const [email, setEmail] = useState('');
       const [password, setPassword] = useState('');
-      const [isLoading, setIsLoading] = useState(false);
-      const { login } = useAuth();
+      const { login, loading } = useAuth(); // Usar o loading do contexto em vez de estado local
       const navigate = useNavigate();
       const location = useLocation();
       const from = location.state?.from?.pathname || "/painel/dashboard";
@@ -21,12 +20,19 @@
 
       const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsLoading(true);
-        const success = await login(email, password);
-        if (success) {
-          navigate(from, { replace: true });
+        try {
+          const success = await login(email, password);
+          if (success) {
+            // Pequeno atraso para garantir que o estado seja atualizado antes da navegação
+            setTimeout(() => {
+              navigate(from, { replace: true });
+            }, 100);
+          }
+        } catch (error) {
+          // Erros são tratados dentro da função login com toasts.
+          console.error("Login page submit error:", error);
+          // Não precisamos resetar o loading aqui, pois isso é feito no AuthContext
         }
-        setIsLoading(false);
       };
 
       return (
@@ -71,13 +77,13 @@
                     className="bg-edcap-subtle-bg"
                   />
                 </div>
-                <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 text-base" disabled={isLoading}>
-                  {isLoading ? (
+                <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 text-base" disabled={loading}>
+                  {loading ? (
                     <motion.div className="animate-spin rounded-full h-5 w-5 border-b-2 border-accent-foreground mr-2"></motion.div>
                   ) : (
                     <LogIn className="mr-2 h-5 w-5" />
                   )}
-                  {isLoading ? 'Entrando...' : 'Entrar'}
+                  {loading ? 'Entrando...' : 'Entrar'}
                 </Button>
               </form>
             </CardContent>
