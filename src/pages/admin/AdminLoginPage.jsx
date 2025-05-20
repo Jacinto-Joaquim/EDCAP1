@@ -19,6 +19,7 @@
       const newLogoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/2f61f8c6-d04f-40a4-b186-80009fcc29f3/2c6f50c5210ee06f70eb9b2f2ab95e54.png";
 
       const handleSubmit = async (e) => {
+        
         e.preventDefault();
         try {
           const success = await login(email, password);

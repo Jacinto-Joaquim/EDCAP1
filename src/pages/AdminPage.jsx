@@ -25,7 +25,7 @@
     const AdminPage = () => {
       const { posts, addPost, updatePost, deletePost, getPostById } = useBlog();
       const { toast } = useToast();
-      const [searchParams] = useSearchParams();
+      const [searchParams] = useSearchParams();   
       const navigate = useNavigate();
 
       const [view, setView] = useState('list'); 
