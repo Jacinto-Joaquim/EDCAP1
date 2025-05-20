@@ -1,5 +1,4 @@
-
-    import React, { Suspense, lazy } from 'react';
+    import React, { Suspense, lazy, useState, useEffect } from 'react';
     import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
     import { AnimatePresence, motion } from 'framer-motion';
     import Header from '@/components/layout/Header.jsx';
@@ -21,6 +20,9 @@
     const ContatoPage = lazy(() => import('@/pages/ContatoPage.jsx'));
     const NotFoundPage = lazy(() => import('@/pages/NotFoundPage.jsx'));
     const PrivacyPolicyPage = lazy(() => import('@/pages/PrivacyPolicyPage.jsx'));
+    const CarreirasPage = lazy(() => import('@/pages/CarreirasPage.jsx'));
+    const FaqsPage = lazy(() => import('@/pages/FaqsPage.jsx'));
+    const TermosDeUsoPage = lazy(() => import('@/pages/TermosDeUsoPage.jsx'));
 
     const AdminLoginPage = lazy(() => import('@/pages/admin/AdminLoginPage.jsx'));
     const AdminRegisterPage = lazy(() => import('@/pages/admin/AdminRegisterPage.jsx'));
@@ -60,19 +62,32 @@
     );
 
     const ProtectedRoute = ({ children, allowedRoles }) => {
-      const { isAuthenticated, userRole, loading } = useAuth();
+      const { isAuthenticated, userRole, loading, user } = useAuth();
       const location = useLocation();
+      const [checkingAuth, setCheckingAuth] = useState(true);
+      
+      useEffect(() => {
+        // Dar tempo para que a autenticação seja verificada corretamente
+        const timer = setTimeout(() => {
+          setCheckingAuth(false);
+        }, 500);
+        
+        return () => clearTimeout(timer);
+      }, []);
 
-      if (loading) {
+      if (loading || checkingAuth) {
         return <LoadingFallback />;
       }
 
-      if (!isAuthenticated) {
+      // Verificação mais robusta de autenticação
+      if (!isAuthenticated || !user) {
+        console.log("Redirecionando para login: usuário não autenticado");
         return <Navigate to="/painel-edcap-admin-s3cr3t0l0g1n" state={{ from: location }} replace />;
       }
 
       if (allowedRoles && !allowedRoles.includes(userRole)) {
-        return <Navigate to="/painel/dashboard" state={{ from: location }} replace />; 
+        console.log("Redirecionando para dashboard: função não autorizada");
+        return <Navigate to="/painel/dashboard" state={{ from: location, error: "Acesso não autorizado para esta seção." }} replace />; 
       }
 
       return children;
@@ -118,6 +133,9 @@
                 <Route path="/blog/:slug" element={<PageTransitionWrapper><BlogPostPage /></PageTransitionWrapper>} />
                 <Route path="/contato" element={<PageTransitionWrapper><ContatoPage /></PageTransitionWrapper>} />
                 <Route path="/politica-de-privacidade" element={<PageTransitionWrapper><PrivacyPolicyPage /></PageTransitionWrapper>} />
+                <Route path="/carreiras" element={<PageTransitionWrapper><CarreirasPage /></PageTransitionWrapper>} />
+                <Route path="/faq" element={<PageTransitionWrapper><FaqsPage /></PageTransitionWrapper>} />
+                <Route path="/termos-de-uso" element={<PageTransitionWrapper><TermosDeUsoPage /></PageTransitionWrapper>} />
                 
                 <Route path={adminBase} element={<AdminLoginPage />} />
                 <Route path={registerBase} element={<AdminRegisterPage />} />
@@ -158,7 +176,6 @@
           </main>
           {!isAdminRoute && !isAuthRoute && <Footer />}
           {isAdminRoute && <AdminFooter />}
-          {/* WhatsAppButton removido conforme solicitado */}
           <Toaster />
           <CookieConsentBanner />
         </div>
@@ -180,4 +197,3 @@
     }
 
     export default App;
-  
