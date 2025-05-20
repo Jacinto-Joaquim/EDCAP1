@@ -32,10 +32,19 @@
     );
 
     const AdminDashboardPage = () => {
-      const { user, users: allUsers } = useAuth();
-      const { posts } = useBlog();
+      const { user, loading: authLoading } = useAuth();
+      const { posts, loading: blogLoading } = useBlog();
 
-      const userPosts = posts.filter(post => post.author === user.email); // Simple author check
+      if (authLoading || blogLoading || !user || !posts) {
+        return (
+          <div className="flex justify-center items-center h-96">
+              <Loader2 className="h-8 w-8 animate-spin text-primary" />
+              <p className="ml-3">Carregando dashboard...</p>
+        </div>
+        );
+      }
+
+      const userPosts = posts?.filter(post => post.user_id && user?.id && post.user_id === user.id) || [];
 
       return (
         <div className="space-y-8">

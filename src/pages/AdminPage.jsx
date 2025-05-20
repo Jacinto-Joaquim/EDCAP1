@@ -37,12 +37,13 @@
       };
       const [formData, setFormData] = useState(initialFormData);
 
-      useEffect(() => {
+    useEffect(() => {
+      const processParams = async () => {
         const editId = searchParams.get('edit');
         const newPost = searchParams.get('new');
 
         if (editId) {
-          const postToEdit = getPostById(editId);
+          const postToEdit = await getPostById(editId); // await se necessário
           if (postToEdit) {
             setCurrentPost(postToEdit);
             setFormData({
@@ -63,7 +64,10 @@
           setCurrentPost(null);
           setFormData(initialFormData);
         }
-      }, [searchParams, getPostById, toast, navigate]);
+      };
+
+      processParams();
+    }, [searchParams, getPostById, toast, navigate]);
 
 
       const handleFormSubmit = (submittedData) => {
