@@ -70,7 +70,7 @@
         }),
         exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
       };
-
+      /* 
       if (pageLoading || blogLoading) {
         return (
           <div className="flex items-center justify-center h-[calc(100vh-200px)]">
@@ -79,6 +79,8 @@
           </div>
         );
       }
+      */
+
 
       return (
         <div className="space-y-6">
