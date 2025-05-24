@@ -76,6 +76,7 @@
       }, []);
 
       if (loading || checkingAuth) {
+        console.log("your loading is: ", loading, " e o seu checkingauth is", checkingAuth);
         return <LoadingFallback />;
       }
 

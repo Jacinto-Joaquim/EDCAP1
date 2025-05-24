@@ -25,7 +25,7 @@
           <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col flex-grow bg-card border-border">
             {post.image_url && (
               <div className="aspect-video overflow-hidden rounded-t-lg">
-                <img  src={post.image_url} alt={post.image_alt || post.title} className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" src="https://images.unsplash.com/photo-1697256200022-f61abccad430" />
+                <img  src={post.image_url} alt={post.image_alt || post.title} className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"  />
               </div>
             )}
             <CardHeader className="pb-3">
@@ -166,7 +166,7 @@
                 animate={{ opacity: 1 }}
                 className="text-center py-12"
               >
-                <img  src="/placeholder-no-results.svg" alt="Nenhum post encontrado" className="mx-auto mb-6 h-40 w-40 text-muted-foreground" src="https://images.unsplash.com/photo-1625708974337-fb8fe9af5711" />
+                <img alt="Nenhum post encontrado" className="mx-auto mb-6 h-40 w-40 text-muted-foreground" src="https://images.unsplash.com/photo-1625708974337-fb8fe9af5711" />
                 <p className="text-xl text-primary font-semibold mb-2">Nenhum post encontrado</p>
                 <p className="text-muted-foreground">
                   Tente ajustar sua busca ou categoria. Novos conteúdos são adicionados regularmente!

@@ -180,7 +180,7 @@ export const AuthProvider = ({ children }) => {
   
   const fetchUsers = async () => {
     if (!supabase || userRoleState !== 'manager') {
-        // toast({ title: "Acesso Negado", description: "Apenas gerentes podem buscar usuários.", variant: "destructive" });
+         toast({ title: "Acesso Negado", description: "Apenas gerentes podem buscar usuários.", variant: "destructive" });
         return [];
     }
     setLoadingAuthState(true);

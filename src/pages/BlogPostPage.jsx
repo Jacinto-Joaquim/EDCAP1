@@ -66,7 +66,8 @@
         return (
           <div className="text-center py-20">
             <Helmet><title>Post Não Encontrado | EDCAP Consultoria</title></Helmet>
-            <img  src="/placeholder-not-found.svg" alt="Post não encontrado" className="mx-auto mb-6 h-48 w-48 text-muted-foreground" src="https://images.unsplash.com/photo-1697256200022-f61abccad430" />
+            <img  src="/placeholder-not-found.svg" alt="Post não encontrado" className="mx-auto mb-6 h-48 w-48 text-muted-foreground" />
+            
             <h1 className="text-3xl font-bold text-primary mb-4">Post Não Encontrado</h1>
             <p className="text-muted-foreground mb-6">O artigo que você está procurando não existe ou foi movido.</p>
             <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary/5">
@@ -154,7 +155,8 @@
                   </div>
                   {post.image_url && (
                     <div className="aspect-[16/9] rounded-lg overflow-hidden shadow-lg my-6 border border-border">
-                      <img  src={post.image_url} alt={post.image_alt || post.title} className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1675023112817-52b789fd2ef0" />
+                      <img  src={post.image_url} alt={post.image_alt || post.title} className="w-full h-full object-cover" />
+
                     </div>
                   )}
                   {canEditOrDelete && (
