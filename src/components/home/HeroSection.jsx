@@ -25,15 +25,17 @@
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {/* 
+            
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-lato mb-6 leading-tight">
                 Transformamos <span className="text-edcap-orange">desafios</span> empresariais em <span className="text-edcap-green">resultados</span> consistentes.
               </h1>
               <p className="text-lg md:text-xl mb-10 text-blue-200 max-w-2xl mx-auto">
                 Consultorias estratégicas e treinamentos especializados para impulsionar o crescimento e a eficiência da sua empresa.
               </p>
+
             */}
 
-            <div className="absolute bottom-8 left-1/2 md:left-10 transform -translate-x-1/2 md:translate-x-0 z-20">
+            <div className="absolute bottom-2 left-1/2 md:left-10 transform -translate-x-1/2 md:translate-x-0 z-20">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}

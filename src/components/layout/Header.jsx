@@ -23,13 +23,15 @@
 
       const newLogoUrl = "https://storage.googleapis.com/hostinger-horizons-assets-prod/2f61f8c6-d04f-40a4-b186-80009fcc29f3/ed5af9e2c44f717f1a31e4fcfe277b8e.png";
 
-      useEffect(() => {
+      {/* 
+        useEffect(() => {
         const handleScroll = () => {
           setIsScrolled(window.scrollY > 20);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-      }, []);
+      }, []);  
+      */}
 
       useEffect(() => {
         setIsOpen(false); 
