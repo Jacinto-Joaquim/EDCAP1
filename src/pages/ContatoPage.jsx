@@ -93,9 +93,9 @@
       };
 
       const contactInfo = [
-        { icon: <Phone className="h-6 w-6 text-accent" />, text: "+244 9XX XXX XXX", label: "Telefone (Angola)" },
-        { icon: <Mail className="h-6 w-6 text-accent" />, text: "info@edcapconsultoria.co.ao", label: "Email" },
-        { icon: <MapPin className="h-6 w-6 text-accent" />, text: "Luanda, Viana, Angola", label: "Localização Principal" },
+        { icon: <Phone className="h-6 w-6 text-accent" />, text: "+244 924 114 831", label: "Telefone (Angola)" },
+        { icon: <Mail className="h-6 w-6 text-accent" />, text: "info@edcapconsultoria.com", label: "Email" },
+        { icon: <MapPin className="h-6 w-6 text-accent" />, text: "Luanda, Kilamba (Ed. R29 ap. 63)", label: "Localização Principal" },
         { icon: <Building className="h-6 w-6 text-accent" />, text: "Escritório EDCAP (Detalhes sob consulta)", label: "Escritório" },
       ];
 
@@ -106,22 +106,22 @@
         <>
           <Helmet>
             <title>Contato - Fale Conosco</title>
-            <meta name="description" content="Entre em contato com a EDCAP Consultoria em Luanda, Viana, Angola. Estamos prontos para ajudar sua empresa a crescer." />
+            <meta name="description" content="Entre em contato com a EDCAP em nosso escritório em Luanda - Kilamba (Ed. R29 ap. 63) ou em Viana, Angola. Estamos prontos para ajudar sua empresa a crescer." />
             <script type="application/ld+json">
             {`
               {
                 "@context": "https://schema.org",
                 "@type": "ContactPage",
-                "name": "Contato - EDCAP Consultoria",
-                "description": "Entre em contato com a EDCAP Consultoria para soluções empresariais em Angola.",
-                "url": "https://www.edcapconsultoria.co.ao/contato",
+                "name": "Contato - EDCAP Consultoria e Gestão",
+                "description": "Entre em contato com a EDCAP Consultoria-Gestão para soluções empresariais em Angola.",
+                "url": "https://www.edcapconsultoria.com/contato",
                 "mainEntityOfPage": {
                   "@type": "WebPage",
-                  "@id": "https://www.edcapconsultoria.co.ao/contato"
+                  "@id": "https://www.edcapconsultoria.com/contato"
                 },
                 "publisher": {
                   "@type": "Organization",
-                  "name": "EDCAP Consultoria",
+                  "name": "EDCAP Consultoria e Gestão",
                   "logo": {
                     "@type": "ImageObject",
                     "url": "https://storage.googleapis.com/hostinger-horizons-assets-prod/2f61f8c6-d04f-40a4-b186-80009fcc29f3/2c6f50c5210ee06f70eb9b2f2ab95e54.png"
@@ -159,7 +159,7 @@
                     ))}
                   </div>
                   <div className="mt-8">
-                    <h3 className="text-xl font-semibold text-primary mb-3 font-lato">Nossa Localização em Viana, Luanda</h3>
+                    <h3 className="text-xl font-semibold text-primary mb-3 font-lato">Nossa Localização no Kilamba (Ed. R29 ap. 63) ou em Viana, Luanda</h3>
                     <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg border border-border">
                       <iframe
                         src={mapUrl}

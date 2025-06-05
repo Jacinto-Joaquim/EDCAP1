@@ -8,9 +8,9 @@
       const currentYear = new Date().getFullYear();
 
       const footerLinks = [
-        { title: 'Empresa', links: [ { name: 'Sobre Nós', path: '/sobre' }, { name: 'Nossa Equipe', path: '/sobre#equipe' }, { name: 'Carreiras', path: '/contato' } ] },
-        { title: 'Serviços', links: [ { name: 'Consultoria Estratégica', path: '/servicos#consultoria-estrategica' }, { name: 'Gestão de Projetos', path: '/servicos#gestao-projetos' }, { name: 'Desenvolvimento de Negócios', path: '/servicos#desenvolvimento-negocios' } ] },
-        { title: 'Recursos', links: [ { name: 'Blog', path: '/blog' }, { name: 'Cases de Sucesso', path: '/cases' }, { name: 'FAQs', path: '/contato#faq' } ] },
+        { title: 'Empresa', links: [ { name: 'Sobre Nós', path: '/sobre' }, { name: 'Nossa Equipe', path: '/sobre#equipe' }, { name: 'Carreiras', path: '/carreiras' }, { name: 'Escritórios', path: '/contato' } ] },
+        { title: 'Serviços', links: [ { name: 'Consultoria Estratégica', path: '/servicos#consultoria-estrategica' }, { name: 'Treinamento em Liderança', path: '/servicos#gestao-projetos' }, { name: 'Desenvolvimento de Negócios', path: '/servicos#desenvolvimento-negocios' } ] },
+        { title: 'Recursos', links: [ { name: 'Blog', path: '/blog' }, { name: 'Cases de Sucesso', path: '/cases' }, { name: 'FAQs', path: '/faq' } ] },
       ];
 
       const socialMedia = [
@@ -21,9 +21,9 @@
       ];
 
       const contactInfo = [
-        { icon: <MapPin className="h-5 w-5 mr-2 flex-shrink-0" />, text: "Luanda, Viana, Angola" },
-        { icon: <Phone className="h-5 w-5 mr-2 flex-shrink-0" />, text: "+244 9XX XXX XXX" },
-        { icon: <Mail className="h-5 w-5 mr-2 flex-shrink-0" />, text: "info@edcapconsultoria.co.ao" },
+        { icon: <MapPin className="h-5 w-5 mr-2 flex-shrink-0" />, text: "Luanda, Kilamba (Ed. R29 ap. 63)" },
+        { icon: <Phone className="h-5 w-5 mr-2 flex-shrink-0" />, text: "+244 924 114 831" },
+        { icon: <Mail className="h-5 w-5 mr-2 flex-shrink-0" />, text: "info@edcapconsultoria.com" },
       ];
 
       return (
@@ -32,10 +32,10 @@
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
               <div className="space-y-4 md:col-span-2 lg:col-span-1">
                 <Link to="/" className="inline-block">
-                  <img  src={newLogoUrl} alt="EDCAP Consultoria Logo Rodapé" className="h-12 mb-2 filter brightness-0 invert" src="https://images.unsplash.com/photo-1501752382981-93226bd2e7af" />
+                  <img alt="EDCAP Consultoria Logo Rodapé" className="h-12 mb-2 filter brightness-0 invert" src="https://images.unsplash.com/photo-1501752382981-93226bd2e7af" />
                 </Link>
                 <p className="text-sm text-primary-foreground/80 leading-relaxed">
-                  EDCAP Consultoria: Transformando desafios em oportunidades de crescimento para empresas em Angola.
+                  EDCAP: Transformando desafios em oportunidades de crescimento para empresas em Angola.
                 </p>
                 <div className="flex space-x-4 pt-2">
                   {socialMedia.map((social) => (
@@ -80,7 +80,7 @@
               </p>
               <div className="flex space-x-4">
                 <Link to="/politica-de-privacidade" className="text-primary-foreground/70 hover:text-accent hover:underline">Política de Privacidade</Link>
-                <Link to="/contato#termos" className="text-primary-foreground/70 hover:text-accent hover:underline">Termos de Uso</Link>
+                <Link to="/termos-de-uso" className="text-primary-foreground/70 hover:text-accent hover:underline">Termos de Uso</Link>
               </div>
             </div>
           </div>

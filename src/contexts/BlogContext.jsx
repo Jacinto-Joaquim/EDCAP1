@@ -58,6 +58,7 @@
       }, [supabase, toast, user, setLoading]);
 
       return (
+        console.log(loading, `blogContext`),
         <BlogContext.Provider value={{ 
           posts, 
           loading, 

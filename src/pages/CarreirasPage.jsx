@@ -32,7 +32,7 @@
       return (
         <>
         <Helmet>
-            <title>Carreiras na EDCAP Consultoria</title>
+            <title>Carreiras na EDCAP Consultoria e Gestão</title>
             <meta name="description" content="Junte-se à equipe da EDCAP Consultoria em Angola. Veja as nossas oportunidades de carreira e faça parte da transformação." />
         </Helmet>
         <div className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/10">

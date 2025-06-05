@@ -25,10 +25,10 @@
           >
             <h2 className="text-3xl md:text-4xl font-bold font-lato text-primary mb-6">Sobre a EDCAP Consultoria</h2>
             <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-              A EDCAP é uma consultoria especializada em transformar o potencial de pequenas e médias empresas em performance excepcional. Nossa missão é fornecer insights estratégicos e soluções práticas que impulsionem o crescimento sustentável e a excelência operacional.
+              A EDCAP é uma empresa especializada nas áreas de consultoria empresarial, gestão, planejamento estratégico e marketing, com atuação consolidada desde 2017. Ao longo dos anos, tem se destacado pelo compromisso com a excelência, seriedade e geração de valor para os seus parceiros e clientes.
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Com uma equipe de consultores experientes e apaixonados por resultados, combinamos conhecimento técnico aprofundado com uma abordagem colaborativa, trabalhando lado a lado com nossos clientes para superar desafios e alcançar seus objetivos mais ambiciosos.
+              Iniciamos nossa trajetória com foco em treinamentos profissionais, direcionados ao empreendedorismo, vendas e estratégia de negócios, contribuindo para o fortalecimento de competências e o desenvolvimento de lideranças.
             </p>
             <Button asChild variant="outline" className="border-edcap-orange text-edcap-orange hover:bg-edcap-orange hover:text-white group">
               <Link to="/sobre">

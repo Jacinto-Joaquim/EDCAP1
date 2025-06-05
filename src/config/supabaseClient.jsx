@@ -29,6 +29,7 @@
     export const getSupabase = () => {
         if (!supabaseInstance) {
             console.warn("Supabase client was not initialized. Attempting to initialize now via getSupabase.");
+            console.log("O supabase instancia nao foi inicializado")
             return initializeSupabase();
         }
         return supabaseInstance;

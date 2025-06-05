@@ -25,7 +25,7 @@
           <BenefitCard 
             icon={<Award />} 
             title="Experiência Comprovada"
-            description="Anos de atuação no mercado, com um histórico de sucesso em diversos setores e portes de empresa."
+            description="Desde 2017, atuando com foco em marketing, vendas, gestão e estratégias empresariais, gerando resultados concretos e mudanças sustentáveis nas organizações."
           />
           <BenefitCard 
             icon={<BarChart2 />} 

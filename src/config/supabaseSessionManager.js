@@ -5,9 +5,11 @@
       const manageSession = async () => {
         if (!supabase) {
             setLoadingAuthState(false);
+            console.log("Initial test 1");
             return;
         }
         setLoadingAuthState(true);
+        console.log("Initial test 2")
         try {
             const { data: { session }, error } = await supabase.auth.getSession();
             if (error) {
@@ -18,6 +20,7 @@
             } else if (session) {
                 // Garantir que o perfil do usuário seja carregado corretamente
                 await loadUserProfile(session.user);
+                console.log("Initial test 3")
                 
                 // Definir explicitamente o estado de autenticação
                 setIsAuthenticated(true);

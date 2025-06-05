@@ -3,111 +3,116 @@ import { useEffect } from 'react';
 export const supabaseSessionManager = (supabase, loadUserProfile, setLoadingAuthState, setIsAuthenticated, setUserState, setUserRoleState, navigate) => {
   const manageSession = async () => {
     if (!supabase) {
-        console.error("Supabase client not available in session manager");
+        console.error("[SupabaseSessionManager] manageSession: Supabase client not available.");
         setLoadingAuthState(false);
+        console.log("[SupabaseSessionManager] manageSession: setLoadingAuthState(false) due to no Supabase client.");
         return;
     }
     
+    console.log("[SupabaseSessionManager] manageSession: Iniciando. setLoadingAuthState(true).");
     setLoadingAuthState(true);
     
     try {
-        console.log("Verificando sessão existente...");
+        console.log("[SupabaseSessionManager] manageSession: Verificando sessão existente...");
         const { data: { session }, error } = await supabase.auth.getSession();
         
         if (error) {
-            console.error("Error fetching session:", error);
+            console.error("[SupabaseSessionManager] manageSession: Error fetching session:", error);
             setIsAuthenticated(false);
             setUserState(null);
             setUserRoleState(null);
-            return;
-        } 
-        
-        if (session?.user) {
-            console.log("Sessão encontrada para:", session.user.email);
+            // Não há return aqui, o finally cuidará do loading
+        } else if (session?.user) {
+            console.log("[SupabaseSessionManager] manageSession: Sessão encontrada para:", session.user.email);
             
-            // Garantir que o perfil do usuário seja carregado corretamente
             const userProfile = await loadUserProfile(session.user);
             
             if (userProfile) {
-                // Definir explicitamente o estado de autenticação
                 setIsAuthenticated(true);
                 setUserState(session.user);
-                
-                console.log("Sessão recuperada com sucesso:", session.user.email, "Role:", userProfile.role);
+                // setUserRoleState é definido dentro de loadUserProfile
+                console.log("[SupabaseSessionManager] manageSession: Sessão recuperada com sucesso:", session.user.email, "Role:", userProfile.role);
             } else {
-                console.warn("Perfil não encontrado para sessão existente:", session.user.email);
-                // Não fazer logout automático, apenas manter o estado não autenticado
+                console.warn("[SupabaseSessionManager] manageSession: Perfil não encontrado para sessão existente:", session.user.email);
                 setIsAuthenticated(false);
                 setUserState(null);
                 setUserRoleState(null);
             }
         } else {
-            console.log("Nenhuma sessão ativa encontrada");
+            console.log("[SupabaseSessionManager] manageSession: Nenhuma sessão ativa encontrada.");
             setIsAuthenticated(false);
             setUserState(null);
             setUserRoleState(null);
         }
     } catch (e) {
-        console.error("Unexpected error in manageSession:", e);
+        console.error("[SupabaseSessionManager] manageSession: Unexpected error:", e);
         setIsAuthenticated(false);
         setUserState(null);
         setUserRoleState(null);
     } finally {
+        console.log("[SupabaseSessionManager] manageSession: Bloco finally. setLoadingAuthState(false).");
         setLoadingAuthState(false);
     }
   };
 
   const onAuthStateChange = () => {
     if (!supabase) {
-        console.error("Supabase client not available for auth state change");
-        return { data: { subscription: null } };
+        console.error("[SupabaseSessionManager] onAuthStateChange: Supabase client not available.");
+        return { data: { subscription: null } }; // Retornar um objeto compatível
     }
     
     return supabase.auth.onAuthStateChange(async (event, session) => {
-      console.log("Auth state change event:", event);
+      console.log(`[SupabaseSessionManager] onAuthStateChange: Evento: ${event}.`);
       
+      console.log("[SupabaseSessionManager] onAuthStateChange: setLoadingAuthState(true).");
       setLoadingAuthState(true);
       
       try {
         if (event === 'SIGNED_IN' && session?.user) {
-          console.log("Usuário conectado:", session.user.email);
+          console.log("[SupabaseSessionManager] onAuthStateChange: Usuário conectado:", session.user.email);
           const userProfile = await loadUserProfile(session.user);
           
           if (userProfile) {
-            console.log("Perfil carregado após login:", userProfile.email);
+            console.log("[SupabaseSessionManager] onAuthStateChange: Perfil carregado após SIGNED_IN:", userProfile.email);
+            // Estados de autenticação e usuário já são definidos por loadUserProfile
           } else {
-            console.warn("Falha ao carregar perfil após login");
+            console.warn("[SupabaseSessionManager] onAuthStateChange: Falha ao carregar perfil após SIGNED_IN.");
+            // Considerar se é necessário redefinir estados de autenticação aqui
           }
         } else if (event === 'SIGNED_OUT') {
-          console.log("Usuário desconectado");
+          console.log("[SupabaseSessionManager] onAuthStateChange: Usuário desconectado.");
           setIsAuthenticated(false);
           setUserState(null);
           setUserRoleState(null);
           
-          // Navegar para a página de login apenas se o evento for explicitamente SIGNED_OUT
           if (navigate) {
-            console.log("Redirecionando para página de login após logout");
+            console.log("[SupabaseSessionManager] onAuthStateChange: Redirecionando para página de login após SIGNED_OUT.");
             navigate('/painel-edcap-admin-s3cr3t0l0g1n', { replace: true });
           }
         } else if (event === 'USER_UPDATED' && session?.user) {
-          console.log("Dados do usuário atualizados:", session.user.email);
-          await loadUserProfile(session.user, true); 
+          console.log("[SupabaseSessionManager] onAuthStateChange: Dados do usuário atualizados:", session.user.email);
+          await loadUserProfile(session.user, true); // Forçar recarregamento do perfil
         } else if (event === 'PASSWORD_RECOVERY') {
-          console.log("Evento de recuperação de senha detectado");
+          console.log("[SupabaseSessionManager] onAuthStateChange: Evento de recuperação de senha detectado.");
+          // Geralmente não altera o estado de loading ou autenticação diretamente
         } else if (event === 'TOKEN_REFRESHED') {
-          console.log("Token atualizado");
+          console.log("[SupabaseSessionManager] onAuthStateChange: Token atualizado.");
+          // Geralmente não altera o estado de loading ou autenticação diretamente
         } else if (!session) {
-          console.log("Sessão não disponível após evento:", event);
-          setIsAuthenticated(false);
-          setUserState(null);
-          setUserRoleState(null);
+          // Este caso pode ocorrer para eventos como INITIAL_SESSION se não houver sessão,
+          // ou após um logout se o evento SIGNED_OUT não for o último.
+          console.log(`[SupabaseSessionManager] onAuthStateChange: Sessão não disponível após evento ${event}.`);
+          // Se não há sessão, garantir que o usuário não está autenticado.
+          // Evitar chamar setLoadingAuthState(false) aqui se outro evento mais específico já o fez ou fará.
+          // A lógica de `loadUserProfile` e o `finally` devem cobrir a maioria dos casos.
         }
       } catch (e) {
-        console.error("Unexpected error in onAuthStateChange handler:", e);
+        console.error("[SupabaseSessionManager] onAuthStateChange: Unexpected error in handler:", e);
         setIsAuthenticated(false);
         setUserState(null);
         setUserRoleState(null);
       } finally {
+        console.log(`[SupabaseSessionManager] onAuthStateChange: Bloco finally para evento ${event}. setLoadingAuthState(false).`);
         setLoadingAuthState(false);
       }
     });

@@ -53,12 +53,17 @@ export const AuthProvider = ({ children }) => {
     );
     
     const initAuth = async () => {
+      console.log("[AuthContext] initAuth: Iniciando manageSession...");
       await manageSession();
+      console.log("[AuthContext] initAuth: manageSession concluído.");
       setAuthInitialized(true);
+      console.log("[AuthContext] initAuth: authInitialized definido como true.");
     };
     
+    console.log("[AuthContext] useEffect: Configurando initAuth e listener...");
     initAuth();
     const { data: authListener } = onAuthStateChange();
+    console.log("[AuthContext] useEffect: Listener de autenticação configurado.");
     
     return () => {
       authListener?.subscription?.unsubscribe();
@@ -88,9 +93,11 @@ export const AuthProvider = ({ children }) => {
         
         // Garantir que o usuário seja carregado corretamente
         const userProfile = await loadUserProfile(data.user);
+        console.log("Initial test 6", userProfile)
         
         if (!userProfile) {
           console.error("Falha ao carregar perfil após login");
+          console.log("Initial test 7 erro ao carregar perfil apos login")
           toast({ title: "Erro de Perfil", description: "Não foi possível carregar seu perfil. Tente novamente.", variant: "destructive" });
           return false;
         }
@@ -215,19 +222,21 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  // Log para depuração
+  console.log(`[AuthContext] Render: loadingAuthState=${loadingAuthState}, loadingProfile=${loadingProfile}, combinedLoading=${loadingAuthState || loadingProfile}, authInitialized=${authInitialized}`);
 
   return (
-    <AuthContext.Provider value={{ 
-        user: profile, 
-        userRole: userRoleState, 
-        isAuthenticated: isAuthenticatedState, 
+    <AuthContext.Provider value={{
+        user: profile,
+        userRole: userRoleState,
+        isAuthenticated: isAuthenticatedState,
         loading: loadingAuthState || loadingProfile,
         authInitialized,
         profileError,
-        login, 
-        register, 
-        logout, 
-        updateUserProfile, 
+        login,
+        register,
+        logout,
+        updateUserProfile,
         uploadProfileImage,
         fetchUsers
     }}>

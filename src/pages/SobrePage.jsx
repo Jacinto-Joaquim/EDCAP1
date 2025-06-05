@@ -78,13 +78,13 @@
               <div>
                 <h2 className="text-3xl font-bold font-lato text-primary mb-6">Nossa Jornada</h2>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Fundada com a paixão por impulsionar o sucesso de pequenas e médias empresas, a EDCAP Consultoria nasceu da percepção de que muitas PMEs, apesar de seu enorme potencial, enfrentavam desafios complexos em gestão, finanças e operações que limitavam seu crescimento.
+                  A EDCAP é uma empresa especializada nas áreas de consultoria empresarial, gestão, planejamento estratégico e marketing, com atuação consolidada desde 2017. Ao longo dos anos, tem se destacado pelo compromisso com a excelência, seriedade e geração de valor para os seus parceiros e clientes.
                 </p>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Ao longo dos anos, construímos uma reputação sólida baseada na entrega de resultados tangíveis e na construção de parcerias de longo prazo com nossos clientes. Nossa abordagem é sempre personalizada, combinando expertise técnica com um profundo entendimento das particularidades de cada negócio.
+                  Iniciamos nossa trajetória com foco em treinamentos profissionais, direcionados ao empreendedorismo, vendas e estratégia de negócios, contribuindo para o fortalecimento de competências e o desenvolvimento de lideranças. Em 2019, ampliamos nosso escopo de atuação, integrando os serviços de mídias digitais, marketing institucional e edições gráficas, com uma equipa multidisciplinar que atendeu diversas organizações com profissionalismo e criatividade.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Hoje, somos referência em consultoria estratégica para PMEs, orgulhosos de cada empresa que ajudamos a prosperar e de cada desafio que transformamos em oportunidade.
+                  Nosso compromisso é oferecer serviços orientados por critérios técnicos, estratégicos e éticos, contribuindo para a sustentabilidade, o posicionamento competitivo e a performance dos nossos clientes no mercado.
                 </p>
               </div>
               <div>
@@ -99,14 +99,14 @@
                 <Target className="h-16 w-16 text-edcap-orange mx-auto mb-4" />
                 <h3 className="text-2xl font-semibold font-lato text-primary mb-3">Missão</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Capacitar pequenas e médias empresas a alcançar seu pleno potencial através de soluções de consultoria estratégica, inovadoras e personalizadas, gerando crescimento sustentável e resultados mensuráveis.
+                  Oferecer soluções estratégicas em gestão, liderança e planejamento para impulsionar o crescimento sustentável de empresas e organizações, promovendo excelência, inovação e impacto positivo nos resultados.
                 </p>
               </motion.div>
               <motion.div initial={{ opacity:0, scale:0.9 }} whileInView={{ opacity:1, scale:1 }} transition={{duration:0.5, delay:0.2}} className="p-6">
                 <Eye className="h-16 w-16 text-edcap-orange mx-auto mb-4" />
                 <h3 className="text-2xl font-semibold font-lato text-primary mb-3">Visão</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Ser a consultoria líder e mais admirada no apoio ao desenvolvimento e sucesso de PMEs no Brasil, reconhecida pela excelência, integridade e impacto positivo nos negócios de nossos clientes.
+                  Ser referência nacional em consultoria e treinamentos empresariais, reconhecida pela transformação que gera em seus clientes e pelo compromisso com a ética, qualidade e desenvolvimento organizacional.
                 </p>
               </motion.div>
               <motion.div initial={{ opacity:0, scale:0.9 }} whileInView={{ opacity:1, scale:1 }} transition={{duration:0.5, delay:0.3}} className="p-6">
@@ -114,10 +114,10 @@
                 <h3 className="text-2xl font-semibold font-lato text-primary mb-3">Valores</h3>
                 <ul className="text-muted-foreground space-y-1 leading-relaxed">
                   <li><ShieldCheck className="inline h-4 w-4 mr-1 text-edcap-green" /> Integridade e Ética</li>
-                  <li><Handshake className="inline h-4 w-4 mr-1 text-edcap-green" /> Parceria com o Cliente</li>
-                  <li><Target className="inline h-4 w-4 mr-1 text-edcap-green" /> Foco em Resultados</li>
+                  <li><Handshake className="inline h-4 w-4 mr-1 text-edcap-green" /> Foco no Cliente</li>
+                  <li><Target className="inline h-4 w-4 mr-1 text-edcap-green" /> Comprometimento com Resultados</li>
                   <li><Award className="inline h-4 w-4 mr-1 text-edcap-green" /> Excelência e Inovação</li>
-                  <li><Users className="inline h-4 w-4 mr-1 text-edcap-green" /> Valorização das Pessoas</li>
+                  <li><Users className="inline h-4 w-4 mr-1 text-edcap-green" /> Desenvolvimento humano</li>
                 </ul>
               </motion.div>
             </div>

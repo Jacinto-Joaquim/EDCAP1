@@ -31,7 +31,7 @@
           <ServiceCard 
             icon={<Briefcase />} 
             title="Gestão Empresarial"
-            description="Otimização de processos, planejamento estratégico e governança corporativa para PMEs."
+            description="Otimização de processos, planejamento estratégico e governança corporativa para empresas."
             link="/servicos#gestao"
           />
           <ServiceCard 
@@ -49,7 +49,7 @@
           <ServiceCard 
             icon={<Users />} 
             title="Desenvolvimento de Equipes"
-            description="Treinamento, coaching, desenvolvimento de lideranças e cultura organizacional."
+            description="Treinamento de equipes, desenvolvimento de lideranças e cultura organizacional."
             link="/servicos#equipes"
           />
         </div>
