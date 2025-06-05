@@ -6,8 +6,8 @@
     import { TrendingUp } from 'lucide-react';
 
     const HeroSection = () => (
-      <div className="relative bg-gradient-to-br from-primary to-secondary text-primary-foreground pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden ">
-        <div className="absolute inset-0 opacity-10" >
+      <div className="relative min-h-screen bg-gradient-to-br from-primary to-secondary text-primary-foreground pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden ">
+        <div className="absolute inset-0 opacity-0" >
           <picture>
             <source media="(min-width: 1920px)" srcSet="https://zldtsjblyhgumsnxunop.supabase.co/storage/v1/object/public/images-institucional//home-2560x1440.webp" />
             <source media="(min-width: 1440px)" srcSet="https://zldtsjblyhgumsnxunop.supabase.co/storage/v1/object/public/images-institucional//home-1920x1080.webp" />
