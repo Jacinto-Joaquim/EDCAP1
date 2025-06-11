@@ -105,8 +105,8 @@ export const AuthProvider = ({ children }) => {
         // Definir explicitamente o estado de autenticação
         setIsAuthenticatedState(true);
         setUserState(data.user);
-        
         toast({ title: "Login Bem-sucedido!", description: "Bem-vindo de volta!" });
+        navigate('/painel/dashboard');
         return true;
       }
       
